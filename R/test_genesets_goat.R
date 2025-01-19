@@ -61,9 +61,9 @@
 #' "zscore" column:
 #' A standardized z-score is computed from geneset p-values + effectsize direction (up/down) if tested.
 #' Importantly, we here return standardized z-scores because the GOAT geneset score (mean of gene scores) is relative to the respective geneset-size-matched null distributions (a skewed normal)!
-#' In contrast, the standardized z-scores are comparable between genesets (as are the pvalues obviously).
+#' In contrast, the standardized z-scores are comparable between genesets (as are the pvalues).
 #'
-#' Only if either (or both) the effectsize-up/down was tested, the direction of regulation has been tested (effectsize_abs and pvalue score types are agnositic to up/down regulation).
+#' Only if either (or both) the effectsize-up/down was tested, the direction of regulation has been tested (effectsize_abs and pvalue score types are agnostic to up/down regulation).
 #' So when score_type was set to any of effectsize/effectsize_down/effectsize_up, the z-scores are negative values in case the "score_type" output column is "effectsize_down".
 #' @seealso `test_genesets`
 #' @export
@@ -73,9 +73,7 @@ test_genesets_goat_precomputed = function(genesets, genelist, score_type) {
   validate_goat_genelist(genelist, score_type)
   validate_goat_genesets(genesets, nrow(genelist))
 
-  # specifically grab the null distribution data we bundled with the R package. Calling get() explicitly ensures
-  # we get a useful error message when something goes wrong
-  goat_null = get("goat_nulldistributions", asNamespace('goat'))
+  goat_null = goat::goat_nulldistributions
 
   ### compute null distribution parameters
   geneset_usize = sort(unique(genesets$ngenes), decreasing = FALSE)
@@ -321,7 +319,7 @@ validate_goat_scoretype = function(x) {
 #' @param x object to validate
 #' @noRd
 validate_goat_niter = function(x) {
-  stopifnot("niter parameter must be a single integer between 10000 and 5000000 (default setting is 100000)" = length(x) == 1 && is.numeric(x) && is.finite(x) && x >= 10000L && x <= 5000000)
+  stopifnot("niter parameter must be a single integer between 10000 and 5000000" = length(x) == 1 && is.numeric(x) && is.finite(x) && x >= 10000L && x <= 5000000)
 }
 
 
