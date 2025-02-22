@@ -1,8 +1,8 @@
-a4706006deebf137e5d3c144ce7130f2 *DESCRIPTION
+3523c2445324b8e962e5aa7976d985c0 *DESCRIPTION
 f63bb8e211c6724eff4e472bd84b7fca *LICENSE.note
 687ce8ddd2e8f134a0d938c3db27e2b7 *NAMESPACE
-f5508b5e8c6d0b0bda431210279d4dbc *NEWS.md
-2d14bc62b8c3fc97c2b3b2baf62709bd *R/RcppExports.R
+cc1834c56aec6db52145c42447eceee9 *NEWS.md
+8fa69a951ebbd40f6ec8ce86dd40928a *R/RcppExports.R
 633c2ddae9231de9502b2f3df383f84c *R/data.R
 dced882f19fab4097220532d3ce1d4bd *R/download_data.R
 015aaa3e0738836124fe9a52372f6043 *R/filter_genesets.R
@@ -17,7 +17,7 @@ d751505655aabce69a621150195910a0 *R/plot_volcano.R
 cc92e45221395e1af23830903d6fc779 *R/save_genesets.R
 964651e89c4dec8752b8d70f9b737937 *R/score_genesets.R
 eae3780742a738e8fe898d48d35f5825 *R/simplify_ontology.R
-762396474c3f17f0f04241d32bb71288 *R/simplify_similarity.R
+d2eac4805eef1b349adab348ee0140f6 *R/simplify_similarity.R
 2acd7df4377fa1d319294f54ca7d07c6 *R/test_genesets.R
 1ddcad24f796ad2efee92aa66667a361 *R/test_genesets_fisherexact.R
 ad4b4b477095452b31eb7494338a4eb9 *R/test_genesets_goat.R

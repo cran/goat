@@ -11,3 +11,7 @@ First public release.
 * support gene sets from various organisms (besides human) via load_genesets_go_fromfile() and load_genesets_go_bioconductor(). Note that one has to provide an input gene list that contains Entrez gene identifiers of the same species.
 
 * download_genesets_goatrepo() will automatically check the GitHub repository for the latest GO release if no specific date/version is provided.
+
+# goat 1.1.2 (2025-02-22)
+
+* bugfix: reduce_genesets()
