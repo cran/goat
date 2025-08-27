@@ -15,3 +15,7 @@ First public release.
 # goat 1.1.2 (2025-02-22)
 
 * bugfix: reduce_genesets()
+
+# goat 1.1.3 (2025-08-27)
+
+* if download functions fail they will yield a message instead of an error (compliance with CRAN policy). This affects functions; download_goat_manuscript_data() , download_genesets_goatrepo() , available_genesets_goatrepo()

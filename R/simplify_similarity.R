@@ -238,8 +238,10 @@ geneset_similarity_matrix = function(mat, mat_row_geneid, mat_col_gsid, genelist
 #'
 #' ## first run the default example from test_genesets() to obtain geneset results
 #' datasets = download_goat_manuscript_data(output_dir)
+#' if(!is.null(datasets)) {
 #' genelist = datasets$`Wingo 2020:mass-spec:PMID32424284`
 #' genesets_asis = download_genesets_goatrepo(output_dir)
+#' if(!is.null(genesets_asis)) {
 #' genesets_filtered = filter_genesets(genesets_asis, genelist)
 #' result = test_genesets(genesets_filtered, genelist, method = "goat",
 #'   score_type = "effectsize", padj_method = "bonferroni", padj_cutoff = 0.05)
@@ -254,6 +256,8 @@ geneset_similarity_matrix = function(mat, mat_row_geneid, mat_col_gsid, genelist
 #' plot_heatmap(clusters, output_dir, colors = hcl.colors(100, "Mako", rev = FALSE))
 #' plot_heatmap(clusters, output_dir, colors = hcl.colors(100, "Turku", rev = TRUE))
 #' plot_heatmap(clusters, output_dir, colors = hcl.colors(100, "Grays", rev = TRUE))
+#' }
+#' }
 #' }
 #' @param x result from `cluster_genesets()`
 #' @param output_dir set to NA to directly show the figures instead of writing them to file.
@@ -410,8 +414,10 @@ plot_heatmap = function(x, output_dir, colors = grDevices::hcl.colors(100, "Viri
 #'
 #' ## first run the default example from test_genesets() to obtain geneset results
 #' datasets = download_goat_manuscript_data(output_dir)
+#' if(!is.null(datasets)) {
 #' genelist = datasets$`Wingo 2020:mass-spec:PMID32424284`
 #' genesets_asis = download_genesets_goatrepo(output_dir)
+#' if(!is.null(genesets_asis)) {
 #' genesets_filtered = filter_genesets(genesets_asis, genelist)
 #' result = test_genesets(genesets_filtered, genelist, method = "goat",
 #'   score_type = "effectsize", padj_method = "bonferroni", padj_cutoff = 0.05)
@@ -436,6 +442,8 @@ plot_heatmap = function(x, output_dir, colors = grDevices::hcl.colors(100, "Viri
 #'   result, output_dir, plot_type = "lollipop", topn = 50,
 #'   score_xaxis = "minlogp", score_color = "oddsratio"
 #' )
+#' }
+#' }
 #' }
 #' @param x results from function `test_genesets`
 #' @param output_dir set to NA to directly show the figures instead of writing them to file.
